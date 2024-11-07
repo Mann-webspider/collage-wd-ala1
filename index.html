@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALA 1</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        nav{
+            width: 100vw;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        .menu ul{
+            display: flex;
+        }
+        .menu ul li{
+            margin-left: 15px;
+            list-style: none;
+            
+        }
+        
+        main{
+            height: 100%;
+        }
+        iframe{
+            width: 100vw;
+            height:  80vh;
+        }
+        button{
+            background-color: rgb(7, 147, 172);
+            padding: 12px 16px;
+            border-radius: 7px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:focus{
+            background-color: rgb(175, 2, 83);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li> <button onclick="changeFrame('Task_1.html')">Task1</button></li>
+                <li> <button onclick="changeFrame('Task_2.html')">Task2</button> </li>
+                <li> <button onclick="changeFrame('Task_3.html')">Task3</button> </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <iframe src="Task_1.html" frameborder="0" id="frame"></iframe>
+    </main>
+    <script>
+        function changeFrame(fileName){
+            let frame = document.getElementById("frame").src = fileName
+        }
+    </script>
+</body>
+</html>
